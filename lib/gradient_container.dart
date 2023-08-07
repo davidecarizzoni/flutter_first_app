@@ -1,6 +1,12 @@
 import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
+const beginAlign = Alignment.bottomRight;
+const endAlign = Alignment.topLeft;
+
+// const => at compile time
+// final => when the code is executed. This is different if a variables stored a function result
+
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
 
@@ -10,9 +16,9 @@ class GradientContainer extends StatelessWidget {
       decoration: const BoxDecoration(
           gradient: LinearGradient(
               colors: [Colors.yellow, Colors.orange],
-              begin: Alignment.bottomRight,
+              begin: beginAlign,
               end: Alignment.topLeft)),
-      child: const Center(child: StyledText()),
+      child: const Center(child: StyledText('Hello world')),
     );
   }
 }

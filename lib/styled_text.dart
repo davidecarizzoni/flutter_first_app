@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget {
-  const StyledText({super.key});
+  // this. Use inside the class to referred something on the class
+  const StyledText(this.text, {super.key});
+
+  final String text;
 
   @override //this indicate that this method override the build method of te StatelessWidget class
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'This is my app!',
-        style: TextStyle(
+    return Text(text,
+        style: const TextStyle(
           fontSize: 28,
           fontWeight: FontWeight.bold,
           color: Colors.black87,
-        ),
-      ),
-    );
+        ));
   }
 }
