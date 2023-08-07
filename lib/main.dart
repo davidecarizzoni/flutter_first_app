@@ -1,3 +1,4 @@
+import 'package:first_app/gradient_container.dart';
 import 'package:flutter/material.dart';
 
 //parse and compiled from top to bottom
@@ -11,25 +12,11 @@ void main() {
   //const keyword provided by dart to improve performance of the application
   //function store internally by the devices (optimize runtime performance)
   //allow to reuse values saved in memories (not saved duplication for example)
-  runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.yellow,
-      body: Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.yellow, Colors.orange],
-                begin: Alignment.bottomRight,
-                end: Alignment.topLeft)),
-        child: const Center(
-          child: Text(
-            'This is my first app!',
-            style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.black87),
-          ),
-        ),
-      ),
+
+  // classes are blueprint for object. Object created from classes using constructor methods of the specific class
+  runApp(
+    const MaterialApp(
+      home: Scaffold(backgroundColor: Colors.yellow, body: GradientContainer()),
     ),
-  ));
+  );
 }
