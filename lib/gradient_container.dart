@@ -8,15 +8,18 @@ const endAlign = Alignment.topLeft;
 // final => when the code is executed. This is different if a variables stored a function result
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  // by default are options
+  const GradientContainer({super.key, required this.colors});
+
+  final List<Color> colors;
 
   @override //this indicate that this method override the build method of te StatelessWidget class
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: [Colors.yellow, Colors.orange],
-              begin: beginAlign,
+              colors: colors,
+              begin: Alignment.bottomRight,
               end: Alignment.topLeft)),
       child: const Center(child: StyledText('Hello world')),
     );

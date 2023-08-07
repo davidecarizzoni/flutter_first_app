@@ -16,7 +16,11 @@ void main() {
   // classes are blueprint for object. Object created from classes using constructor methods of the specific class
   runApp(
     const MaterialApp(
-      home: Scaffold(backgroundColor: Colors.yellow, body: GradientContainer()),
+      home: Scaffold(
+          backgroundColor: Colors.yellow,
+          body: GradientContainer(
+            colors: [Colors.yellow, Colors.orange],
+          )),
     ),
   );
 }
