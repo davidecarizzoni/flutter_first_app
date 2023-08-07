@@ -1,3 +1,4 @@
+import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
 const beginAlign = Alignment.bottomRight;
@@ -21,6 +22,10 @@ class GradientContainer extends StatelessWidget {
 
   final List<Color> colors;
 
+  void rollDice() {
+    print('Dice rolled');
+  }
+
   @override //this indicate that this method override the build method of te StatelessWidget class
   Widget build(BuildContext context) {
     return Container(
@@ -30,10 +35,26 @@ class GradientContainer extends StatelessWidget {
               begin: Alignment.bottomRight,
               end: Alignment.topLeft)),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-3.png',
-          width: 200,
-          height: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/dice-3.png',
+              width: 200,
+              height: 200,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            TextButton(
+                onPressed: rollDice,
+                style: TextButton.styleFrom(
+                    padding: const EdgeInsets.all(12),
+                    textStyle: const TextStyle(fontSize: 24),
+                    backgroundColor: Colors.white),
+                child: const Text('Click mee'))
+          ],
         ),
       ),
     );
