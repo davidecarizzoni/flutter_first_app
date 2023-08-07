@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     // In this course, you will, of course, not just use them a lot but
     // also learn about many other widgets!
     return MaterialApp(
-      title: 'Flutter First App',
+      title: 'Flutter First Appppp',
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
@@ -29,11 +29,11 @@ class MyApp extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.all(12),
           child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Flutter - The Complete Guide',
+                'Flutter - The Complete Guide edit',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 24,
